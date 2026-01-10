@@ -26,14 +26,14 @@ export default function Navbar({ onBook }: NavbarProps) {
                 {/* Mobile/Default Logo - Hidden on desktop when not scrolled */}
                 <Link
                     href="/"
-                    className={`text-base md:text-lg font-serif text-charcoal tracking-[0.2em] uppercase font-light transition-opacity duration-700 md:opacity-0 ${isScrolled ? 'md:opacity-100' : 'opacity-100 md:pointer-events-none'}`}
+                    className={`text-base md:text-lg font-serif text-charcoal tracking-[0.2em] uppercase font-light transition-opacity duration-700 ${isScrolled ? 'opacity-100' : 'opacity-100 md:opacity-0 md:pointer-events-none'}`}
                 >
                     Luminary
                 </Link>
 
                 <div className={`hidden md:flex items-center gap-12 absolute top-1/2 transition-all duration-1000 ease-[0.22,1,0.36,1] ${isScrolled
-                        ? "right-0 -translate-y-1/2 translate-x-0"
-                        : "left-1/2 -translate-y-1/2 -translate-x-1/2"
+                    ? "right-0 -translate-y-1/2 translate-x-0"
+                    : "left-1/2 -translate-y-1/2 -translate-x-1/2"
                     }`}>
                     <Link href="#experience" className="text-[10px] uppercase tracking-[0.3em] text-text-muted hover:text-charcoal transition-colors font-medium">Experience</Link>
                     <Link href="#services" className="text-[10px] uppercase tracking-[0.3em] text-text-muted hover:text-charcoal transition-colors font-medium">Services</Link>

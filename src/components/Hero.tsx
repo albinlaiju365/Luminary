@@ -90,7 +90,7 @@ export default function Hero({ onBook }: HeroProps) {
                     </div>
 
                     {/* Right Collage Column */}
-                    <div className="md:col-span-12 lg:col-span-7 relative h-[500px] md:h-[600px] mt-24 lg:mt-16">
+                    <div className="md:col-span-12 lg:col-span-7 relative h-[500px] md:h-[600px] mt-12 lg:mt-16">
                         {/* Main Stay Image Slot */}
                         <div className="absolute top-0 right-0 w-[70%] h-[80%] rounded-sm overflow-hidden shadow-soft">
                             <AnimatePresence mode="wait">
