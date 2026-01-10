@@ -1,0 +1,167 @@
+@import "tailwindcss";
+
+@theme {
+  /* Luminary Branding Palette - Architectural & Restrained */
+  --color-stone-50: #F7F7F6;
+  --color-sand-100: #EBE6DF;
+  --color-sand-200: #DED9D2;
+  --color-charcoal: #1A1A1B;
+
+  /* Vibrant Palette Enhancements */
+  --color-sunset: #E27D60;
+  --color-ocean: #41B3A3;
+  --color-forest: #85B885;
+
+  --color-sage-50: #F2F3F0;
+  --color-sage-100: #E1E3DC;
+
+  --color-text-main: #1A1A1B;
+  /* Dark Charcoal */
+  --color-text-muted: #5C5C5E;
+  --color-text-light: #8E8E90;
+
+  /* Typography */
+  --font-serif: var(--font-playfair), serif;
+  --font-sans: var(--font-inter), sans-serif;
+
+  /* Radius & Shadows - More architectural, less "bubbly" */
+  --radius-soft: 12px;
+  --shadow-soft: 0 10px 40px rgba(0, 0, 0, 0.02);
+  --shadow-glass: 0 8px 32px 0 rgba(0, 0, 0, 0.04);
+
+  /* Animations */
+  --animate-fade-in: fadeIn 2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  --animate-slide-up: slideUp 1.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  --animate-mesh: mesh 15s ease-in-out infinite alternate;
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes mesh {
+    0% {
+      transform: translate(0, 0) scale(1) rotate(0deg);
+    }
+
+    33% {
+      transform: translate(7%, 10%) scale(1.15) rotate(5deg);
+    }
+
+    66% {
+      transform: translate(-5%, 15%) scale(0.9) rotate(-3deg);
+    }
+
+    100% {
+      transform: translate(0, 0) scale(1) rotate(0deg);
+    }
+  }
+
+  @keyframes text-rgb-flow {
+    0% {
+      color: var(--color-sunset);
+    }
+
+    33% {
+      color: var(--color-ocean);
+    }
+
+    66% {
+      color: var(--color-forest);
+    }
+
+    100% {
+      color: var(--color-sunset);
+    }
+  }
+}
+
+.animate-text-rgb:hover,
+.animate-text-rgb:active {
+  animation: text-rgb-flow 3s linear infinite;
+}
+
+/* Base Styles */
+@layer base {
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-sand-50);
+    color: var(--color-text-main);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-serif);
+    font-weight: 500;
+  }
+}
+
+/* Utilities */
+.container-custom {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.section-padding {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+@media (min-width: 768px) {
+  .section-padding {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-sand-50);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-sand-200);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-sand-300);
+}
