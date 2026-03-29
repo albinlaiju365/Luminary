@@ -131,15 +131,7 @@ export default function Home() {
                 </div>
             </section>
 
-            {/* Sticky Mobile Book Button */}
-            <div className="fixed bottom-6 left-0 right-0 z-40 px-6 sm:hidden pointer-events-none">
-                <button 
-                    onClick={() => setIsBookingOpen(true)}
-                    className="w-full bg-charcoal-900 text-white py-5 rounded-full text-sm font-medium tracking-[0.1em] uppercase shadow-premium pointer-events-auto active:scale-95 transition-transform"
-                >
-                    Book Appointment
-                </button>
-            </div>
+
 
             <BookingFlowModal
                 isOpen={isBookingOpen}
