@@ -57,16 +57,16 @@ export default function AppleNavbar({ onBook, hideNavItems = false }: AppleNavba
                     )}
 
                     {/* Right Side: Account & CTA */}
-                    <div className={`flex items-center gap-4 md:gap-5 relative z-10 pointer-events-auto ${hideNavItems ? 'ml-auto' : ''}`}>
-                        <a href="/account" className="hidden md:flex text-text-secondary hover:text-charcoal-800 transition-colors">
-                            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <div className={`flex items-center gap-3 sm:gap-4 md:gap-5 relative z-10 pointer-events-auto ${hideNavItems ? 'ml-auto' : ''}`}>
+                        <a href="/account" className="flex text-text-secondary hover:text-charcoal-800 transition-colors">
+                            <svg className="w-[18px] h-[18px] sm:w-5 sm:h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                             </svg>
                         </a>
                         
                         <button
                             onClick={onBook}
-                            className={`hidden sm:inline-flex h-9 px-6 items-center justify-center rounded-full border border-charcoal-900/20 text-[11px] font-medium tracking-[0.2em] uppercase text-charcoal-900 hover:bg-charcoal-900 hover:border-charcoal-900 hover:text-white transition-all duration-500`}
+                            className={`inline-flex h-8 sm:h-9 px-4 sm:px-6 items-center justify-center rounded-full border border-charcoal-900/20 text-[10px] sm:text-[11px] font-medium tracking-[0.2em] uppercase text-charcoal-900 hover:bg-charcoal-900 hover:border-charcoal-900 hover:text-white transition-all duration-500`}
                         >
                             Book
                         </button>
@@ -111,7 +111,7 @@ export default function AppleNavbar({ onBook, hideNavItems = false }: AppleNavba
                                     setMobileMenuOpen(false);
                                     onBook();
                                 }}
-                                className="w-full bg-black text-white py-4 rounded-xl text-lg font-medium"
+                                className="w-full bg-transparent border border-black/20 text-charcoal-900 py-3.5 rounded-full text-xs font-semibold tracking-[0.25em] uppercase hover:bg-black hover:text-white transition-colors duration-500"
                             >
                                 Book Appointment
                             </button>
